@@ -1,0 +1,20 @@
+{  
+    log {
+        output stdout
+        format console  
+        level DEBUG
+          
+        format console {
+            time_local
+        }
+    }  
+}  
+  
+http://localhost:8000 {
+    root * ./whitehead/dist 
+    file_server  
+}  
+  
+#localhost {  
+#    reverse_proxy localhost:8080  
+#}
